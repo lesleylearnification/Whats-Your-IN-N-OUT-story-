@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Pacifico&display=swap');
+:root{--red:#b81f2a;--red2:#8d151d;--yellow:#f5c83d;--cream:#fff8e8;--cream2:#f1e5c9;--ink:#3b3027;--muted:#725d4b;--blue:#84c5d1;--sea:#4f98aa;--green:#3f7950;--shadow:0 20px 50px rgba(76,45,26,.18);--focus:#143e7a}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:#efe4cf}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,#world:focus-visible{outline:4px solid var(--focus);outline-offset:3px}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;background:#fff;padding:10px;z-index:9999}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background:radial-gradient(circle at 10% 10%,white 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,rgba(91,54,30,.04) 0 1px,transparent 1px 5px)}
+.brandbar{max-width:1500px;margin:0 auto;padding:18px 22px 10px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:14px}.mini-arrow{font-size:52px;color:var(--yellow);-webkit-text-stroke:3px var(--red);line-height:1}.kicker{margin:0 0 3px;color:var(--red);font-size:11px;font-weight:800;letter-spacing:.18em}.brand h1{margin:0;font-size:clamp(28px,3.3vw,50px);line-height:.86;letter-spacing:-.02em}.brand h1 span{color:var(--red)}.tagline{margin:7px 0 0;font:italic 17px Georgia,serif;color:#6e4b34}.top-actions{display:flex;gap:8px}
+.shell{max-width:1500px;margin:0 auto;padding:0 18px 28px}.narrator-wrap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;border:2px solid #70543d;border-radius:14px;background:#fff7df;box-shadow:0 5px 0 rgba(112,84,61,.18);padding:10px 14px;margin-bottom:12px}.narrator-lights{display:flex;gap:4px}.narrator-lights i{width:9px;height:9px;border-radius:50%;background:var(--red)}.narrator-lights i:nth-child(2){background:var(--yellow)}.narrator-lights i:nth-child(3){background:#4d865f}.narrator{font:700 clamp(16px,2vw,24px) Georgia,serif}.trip-count{display:flex;align-items:baseline;gap:4px;color:var(--red)}.trip-count strong{font-size:24px}.trip-count span{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+.game-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(320px,.65fr);gap:14px}.map-card,.side-panel{min-width:0}.world{position:relative;aspect-ratio:1000/620;overflow:hidden;border:3px solid #704b33;border-radius:22px;background:linear-gradient(#81c5d4 0 30%,#bfdfd5 48%,#e5c587 75%,#d99a65 100%);box-shadow:var(--shadow);isolation:isolate}.world:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:25;opacity:.11;background-image:repeating-radial-gradient(circle,#5d3e2b 0 1px,transparent 1px 5px)}
+.skyline{position:absolute;inset:0;background:radial-gradient(circle at 82% 16%,#ffe28a 0 6%,transparent 6.2%),linear-gradient(180deg,rgba(255,255,255,.25),transparent 55%)}.coast{position:absolute;right:-3%;bottom:-4%;width:34%;height:55%;background:linear-gradient(150deg,#72b9c3,#3e7f93);clip-path:polygon(30% 0,100% 8%,100% 100%,0 100%,8% 65%);border-left:6px solid rgba(255,249,225,.7)}.desert{position:absolute;bottom:-3%;background:#c78952;opacity:.92;z-index:0}.d1{left:-8%;width:78%;height:48%;clip-path:polygon(0 55%,15% 35%,27% 47%,41% 23%,55% 49%,70% 31%,83% 55%,100% 37%,100% 100%,0 100%)}.d2{right:14%;width:68%;height:55%;background:#99755d;clip-path:polygon(0 55%,12% 28%,25% 50%,40% 17%,57% 52%,74% 25%,89% 48%,100% 35%,100% 100%,0 100%);opacity:.86}.roads{position:absolute;inset:0;width:100%;height:100%;z-index:2}.road-shadow{fill:none;stroke:#6c503c;stroke-width:62;stroke-linecap:round;opacity:.26}.road-main,.side-road{fill:none;stroke:#cfa165;stroke-width:48;stroke-linecap:round}.road-center,.side-center{fill:none;stroke:#f6e7bc;stroke-width:4;stroke-linecap:round;stroke-dasharray:14 13}.side-road{stroke-width:38}.side-center{stroke-width:3}.legend-pill{position:absolute;left:2%;top:2%;z-index:14;background:rgba(255,248,229,.92);border:2px solid #705039;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800;box-shadow:0 5px 10px rgba(78,46,27,.12)}
+.landmark{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);z-index:8;border:0;background:transparent;width:clamp(92px,12vw,168px);padding:0;filter:drop-shadow(0 7px 5px rgba(47,35,25,.25));transition:.2s transform,.2s filter}.landmark:hover,.landmark.near{transform:translate(-50%,-50%) scale(1.1);filter:drop-shadow(0 8px 7px rgba(47,35,25,.35))}.landmark img{display:block;width:100%;height:100px;object-fit:contain}.landmark span{display:inline-block;margin-top:-6px;background:#fff4d4;border:2px solid #b51f28;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800;color:#5b3d2a;white-space:nowrap}.landmark.visited span{background:#f3ca45}.landmark.visited:after{content:"✓";position:absolute;right:4px;top:0;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#3e7a51;color:white;border:2px solid white;font-weight:900}
+.car{position:absolute;left:8%;top:82%;width:clamp(58px,8vw,105px);z-index:15;transform:translate(-50%,-50%) rotate(0deg);transform-origin:50% 55%;will-change:left,top,transform;transition:filter .15s}.car img{display:block;width:100%;pointer-events:none}.car.moving{filter:drop-shadow(0 5px 3px rgba(0,0,0,.24))}.dust{position:absolute;left:11%;bottom:4%;width:17px;height:11px;border-radius:50%;background:#e7c89a;opacity:0}.car.moving .dust{animation:dust .55s infinite}.car.moving .dust2{animation-delay:.25s;left:1%}@keyframes dust{0%{opacity:.6;transform:scale(.3) translate(0,0)}100%{opacity:0;transform:scale(2) translate(-18px,3px)}}
+.near-prompt{position:absolute;z-index:20;left:50%;bottom:3%;transform:translateX(-50%);background:#3e3026;color:white;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.25)}kbd{background:#fff;color:#3e3026;border-radius:4px;padding:2px 6px}
+.egg{position:absolute;z-index:9;border:0;background:rgba(255,248,229,.72);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:21px;box-shadow:0 4px 7px rgba(0,0,0,.2);animation:peek 3.2s infinite}.egg:hover{transform:scale(1.2)}.egg-a{left:18%;top:30%}.egg-b{left:40%;top:63%}.egg-c{left:67%;top:12%}.egg-d{left:80%;top:75%}.egg-e{left:94%;top:41%}@keyframes peek{0%,85%,100%{transform:rotate(0) scale(1)}91%{transform:rotate(8deg) scale(1.15)}}.egg.found{display:none}
+.touch-controls{display:none;position:absolute;z-index:18;left:15px;bottom:14px}.touch-controls>button,.touch-controls div button{width:48px;height:44px;border:2px solid #704b33;background:rgba(255,248,229,.9);font-weight:900}.touch-controls>button{display:block;margin:0 auto 4px}.touch-controls div{display:flex;gap:4px}
+.map-footer{display:flex;justify-content:space-between;gap:12px;padding:8px 7px 0;font-size:12px;color:#6a5140}.finds{font-weight:800;letter-spacing:.08em}.finds strong{color:var(--red)}
+.side-panel{display:grid;gap:12px;align-content:start}.collection,.road-log{background:#fff5dc;border:2px solid #725139;border-radius:18px;padding:15px;box-shadow:0 10px 25px rgba(80,46,28,.11)}.side-head{display:flex;justify-content:space-between;align-items:start;gap:10px}.side-head h2,.road-log h2{margin:2px 0 0;font:700 23px Georgia,serif}.small{font-size:12px;color:#6d5948;line-height:1.45}.postcard-btn{border:2px solid #89141b;border-radius:11px;background:var(--red);color:white;padding:8px 10px;text-align:center;min-width:112px;font-size:10px}.postcard-btn span{font-size:22px;font-weight:900}.postcard-btn b{font-size:10px}.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px;max-height:338px;overflow:auto}.collect-card{background:#fffaf0;border:1px solid #b79a76;border-radius:9px;padding:6px;text-align:center;min-height:84px}.collect-card img{width:100%;height:52px;object-fit:contain}.collect-card strong{display:block;font-size:10px}.collect-card em{display:block;font-size:8px;color:#7e6755}.empty-state{grid-column:1/-1;text-align:center;padding:24px 10px;font:italic 13px Georgia,serif;color:#765f4d}.road-log{min-height:150px}.road-log #roadLog{max-height:170px;overflow:auto}.road-log p{margin:6px 0;font-size:12px;border-left:3px solid #e3bd4c;padding-left:8px}
+.ghost,.primary,.secondary{border-radius:9px;padding:9px 12px;font-weight:800}.ghost{border:2px solid #75543b;background:#fff5df;color:#4c392b}.primary{border:2px solid #88131a;background:var(--red);color:white;box-shadow:0 3px 0 #771016}.secondary{border:2px solid #7d5a3a;background:#f4cd50;color:#493627}.full{width:100%}
+.dialog{border:2px solid #6f4b32;border-radius:18px;background:#fff5dc;color:#3d3027;box-shadow:0 30px 90px rgba(0,0,0,.38);padding:22px;max-width:560px}.dialog::backdrop{background:rgba(36,23,15,.6)}.dialog h2{font:700 31px Georgia,serif;margin:3px 0 10px}.x{position:absolute;right:10px;top:7px;border:0;background:transparent;font-size:27px}.discovery-visual{height:180px;border-radius:13px;background:linear-gradient(#9ed0d5,#e8c28c);border:2px solid #a17d58;display:grid;place-items:center;overflow:hidden}.discovery-visual img{width:80%;height:90%;object-fit:contain}.egg-visual{height:160px}.fact{font:16px/1.48 Georgia,serif}.dialog label{display:block;font-weight:800;margin:10px 0 6px}textarea,input{width:100%;border:2px solid #997451;border-radius:9px;background:#fffcf1;color:#3d3027;padding:10px}textarea{min-height:78px;resize:vertical}.dialog-actions,.share-row{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}.unlock{color:var(--red);font-weight:900}
+.postcard-dialog{max-width:1120px;width:min(94vw,1120px)}.postcard-editor-head{display:flex;justify-content:space-between;align-items:start;gap:15px}.title-row{display:grid;grid-template-columns:auto minmax(180px,420px);gap:12px;align-items:center;margin:10px 0}.title-row label{margin:0}.editor-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.55fr);gap:13px}.postcard-canvas{position:relative;aspect-ratio:16/10;overflow:hidden;border:3px solid #6e4d34;border-radius:12px;background:linear-gradient(#8fc8d1 0 38%,#dbcc9d 58%,#cc8a58 100%);box-shadow:inset 0 0 40px rgba(74,47,29,.15);isolation:isolate}.postcard-canvas:after{content:"";position:absolute;inset:0;z-index:30;pointer-events:none;opacity:.12;background:repeating-radial-gradient(circle,#4d3526 0 1px,transparent 1px 5px)}.pc-sun{position:absolute;right:12%;top:8%;width:12%;aspect-ratio:1;border-radius:50%;background:#f4d36d;box-shadow:0 0 45px #f0c45f}.pc-mountains{position:absolute;left:-5%;right:-5%;bottom:15%;height:52%;background:#896a5c;clip-path:polygon(0 100%,0 65%,10% 42%,20% 62%,31% 20%,45% 62%,58% 34%,70% 66%,84% 39%,100% 58%,100% 100%)}.pc-road{position:absolute;left:28%;bottom:-5%;width:42%;height:72%;background:#66574d;clip-path:polygon(44% 0,58% 0,100% 100%,0 100%)}.pc-road:after{content:"";position:absolute;left:49%;top:7%;height:100%;width:3%;background:repeating-linear-gradient(#f1c84f 0 8%,transparent 8% 16%)}.pc-heading{position:absolute;z-index:7;left:4%;top:4%;font:clamp(20px,3vw,50px) "Pacifico",cursive;color:var(--red);transform:rotate(-4deg)}.pc-title{position:absolute;z-index:8;left:50%;top:7%;transform:translateX(-50%) rotate(1deg);background:#fff0bd;border:2px solid #735035;padding:7px 12px;font:700 clamp(12px,2vw,24px) Georgia,serif;white-space:nowrap}.pc-stamp{position:absolute;right:3%;bottom:4%;z-index:7;border:3px double rgba(71,48,35,.55);padding:6px;text-align:center;font:bold 10px Georgia,serif;transform:rotate(7deg)}.pc-items{position:absolute;inset:0;z-index:10;pointer-events:none}.pc-item{position:absolute;pointer-events:auto;touch-action:none;cursor:grab;filter:drop-shadow(2px 4px 3px rgba(0,0,0,.25));transform:translate(-50%,-50%) rotate(var(--r,0deg))}.pc-item img{display:block;width:100%;height:100%;object-fit:contain}.pc-note{background:#fff0bd;border:1px solid #765333;padding:7px 9px;font:italic 12px/1.25 Georgia,serif;max-width:180px;box-shadow:2px 4px 5px rgba(0,0,0,.18)}.editor-tray{background:#f3e4c5;border:2px solid #866449;border-radius:12px;padding:10px}.editor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-height:260px;overflow:auto;margin-bottom:10px}.edit-card{border:1px solid #a88660;background:#fff8e8;border-radius:8px;padding:4px;min-height:76px}.edit-card img{width:100%;height:50px;object-fit:contain}.edit-card span{display:block;font-size:9px;font-weight:800}.prototype-note{font-size:11px;color:#6f5a49}
+@media(max-width:1020px){.game-layout{grid-template-columns:1fr}.side-panel{grid-template-columns:1.2fr .8fr}.collection-grid{grid-template-columns:repeat(5,1fr)}.world{aspect-ratio:1000/690}.touch-controls{display:block}.editor-layout{grid-template-columns:1fr}}
+@media(max-width:650px){.brandbar{display:block;padding:12px}.top-actions{margin-top:10px}.mini-arrow{display:none}.shell{padding:0 7px 20px}.narrator-wrap{grid-template-columns:1fr auto}.narrator-lights{display:none}.narrator{font-size:16px}.game-layout{display:block}.world{aspect-ratio:4/5;border-radius:14px}.landmark{width:92px}.landmark img{height:72px}.landmark span{font-size:8px;padding:3px 5px}.legend-pill{font-size:9px;max-width:180px}.car{width:66px}.map-footer{display:none}.side-panel{display:grid;grid-template-columns:1fr;margin-top:10px}.collection-grid{grid-template-columns:repeat(4,1fr);max-height:220px}.road-log{display:none}.dialog{width:94vw;max-width:94vw}.dialog h2{font-size:25px}.discovery-visual{height:145px}.dialog-actions{flex-direction:column}.title-row{grid-template-columns:1fr}.postcard-editor-head{display:block}.editor-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* V3 polish: richer California travel-poster world */
+.world{background:radial-gradient(circle at 76% 18%,#ffd86b 0 7%,transparent 7.2%),linear-gradient(180deg,#72bdd0 0 30%,#b8d7c6 43%,#dfbd78 72%,#bd7548 100%);box-shadow:0 18px 42px rgba(65,36,19,.27),inset 0 0 0 2px rgba(255,255,255,.28)}
+.world:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.18;background:linear-gradient(125deg,transparent 0 48%,rgba(255,245,204,.25) 49% 51%,transparent 52%),radial-gradient(circle at 22% 35%,#fff 0 1px,transparent 2px)}
+.landmark img{height:118px}.landmark span{box-shadow:0 3px 0 rgba(109,48,31,.2);font-size:12px}
+.car{width:clamp(42px,5.2vw,70px);filter:drop-shadow(0 5px 4px rgba(0,0,0,.3))}.car img{aspect-ratio:2/3}
+.roadstop{position:absolute;z-index:10;width:48px;height:48px;padding:3px;border:2px solid #a91c24;border-radius:50%;background:#fff4d8;box-shadow:0 4px 8px rgba(0,0,0,.24);transition:.18s}
+.roadstop img{width:100%;height:100%;object-fit:contain}.roadstop:hover{transform:scale(1.12)}.roadstop.done{opacity:.42;filter:grayscale(.5)}
+.rs1{left:22%;top:59%}.rs2{left:39%;top:46%}.rs3{left:60%;top:34%}.rs4{left:77%;top:29%}.rs5{left:84%;top:18%}
+.postcard-canvas{background:radial-gradient(circle at 78% 16%,#f9c64f 0 8%,transparent 8.3%),linear-gradient(#74b9c8 0 39%,#d4bf8a 54%,#bc7444 100%)}
+.postcard-canvas:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.16;background:repeating-linear-gradient(0deg,rgba(73,44,27,.08) 0 1px,transparent 1px 4px)}
+.pc-mountains{background:linear-gradient(90deg,#795e4e,#9d7151,#73584c)}.pc-heading{text-shadow:2px 2px 0 #f8d873}
+
+/* V4: approved scenic art is now the actual world, not just a reference */
+.polished-world{
+  background-image:
+    linear-gradient(rgba(255,245,216,.04),rgba(255,245,216,.04)),
+    url("assets/polished-map.jpg") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  box-shadow:0 22px 52px rgba(54,31,17,.35),inset 0 0 0 2px rgba(255,255,255,.35) !important;
+}
+.polished-world .skyline,
+.polished-world .coast,
+.polished-world .desert,
+.polished-world .roads{display:none !important}
+.polished-world:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(255,241,205,.10),transparent 25%,transparent 80%,rgba(89,47,25,.12));
+  opacity:1;
+}
+.polished-world:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:24;
+  pointer-events:none;
+  opacity:.08;
+  background:repeating-radial-gradient(circle,#442b1e 0 1px,transparent 1px 5px);
+}
+
+/* Landmarks become clean interactive pins over the richer scene */
+.polished-world .landmark{
+  width:clamp(78px,8.5vw,126px);
+  filter:drop-shadow(0 6px 5px rgba(37,22,12,.35));
+}
+.polished-world .landmark img{
+  height:82px;
+  filter:saturate(1.12) contrast(1.04);
+}
+.polished-world .landmark span{
+  font-size:10px;
+  background:rgba(255,246,220,.96);
+  border:2px solid #b51f28;
+  box-shadow:0 4px 8px rgba(59,33,18,.24);
+}
+.polished-world .roadstop{
+  width:42px;height:42px;
+  background:rgba(255,247,222,.96);
+  border:2px solid #b51f28;
+}
+
+/* Bigger top-down car so it reads clearly over the detailed scene */
+.polished-world .car{
+  width:clamp(44px,5.6vw,74px) !important;
+  filter:drop-shadow(0 7px 5px rgba(0,0,0,.38)) !important;
+}
+
+/* Final postcard now uses the same scenic visual language */
+.polished-postcard{
+  background-image:
+    linear-gradient(rgba(255,245,215,.04),rgba(255,245,215,.04)),
+    url("assets/polished-postcard-base.jpg") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  box-shadow:0 14px 34px rgba(68,38,20,.30),inset 0 0 0 2px rgba(255,255,255,.24) !important;
+}
+.polished-postcard .pc-sun,
+.polished-postcard .pc-mountains,
+.polished-postcard .pc-road{display:none !important}
+.polished-postcard:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,247,220,.05),transparent 45%,rgba(61,32,18,.08));
+  opacity:1;
+}
+.polished-postcard .pc-heading{
+  font-size:clamp(23px,3.4vw,52px);
+  color:#b51f28;
+  text-shadow:2px 2px 0 rgba(255,223,112,.75),0 3px 10px rgba(61,32,18,.18);
+}
+.polished-postcard .pc-title{
+  background:rgba(255,242,201,.94);
+  box-shadow:0 4px 10px rgba(56,31,17,.22);
+}

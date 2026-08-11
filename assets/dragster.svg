@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 120">
+<circle cx="52" cy="91" r="24" fill="#292522"/><circle cx="52" cy="91" r="10" fill="#c8c2b7"/>
+<circle cx="193" cy="91" r="14" fill="#292522"/><circle cx="193" cy="91" r="6" fill="#c8c2b7"/>
+<path d="M49 71h115l23 12-7 13H73z" fill="#b51f28" stroke="#741117" stroke-width="4"/>
+<path d="M87 67l27-34h28l17 38z" fill="#f7d13e" stroke="#741117" stroke-width="4"/>
+<path d="M116 38h22l12 26h-50z" fill="#8cc1ce"/>
+<rect x="117" y="75" width="49" height="15" fill="#fff2d1"/><text x="141" y="86" text-anchor="middle" font-family="Arial" font-size="10" font-weight="900" fill="#b51f28">DRAG STRIP</text>
+<path d="M14 74h25" stroke="#333" stroke-width="7"/><path d="M10 62l22 12-22 12z" fill="#777"/>
+</svg>

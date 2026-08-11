@@ -1,0 +1,41 @@
+{
+  "title": "What's Your IN-N-OUT Story?",
+  "tagline": "Hit the road back to something good.",
+  "version": "2.0 playable prototype",
+  "features": [
+    "WASD + arrow-key car control",
+    "touch controls",
+    "smooth acceleration/deceleration",
+    "nonlinear map",
+    "large landmarks",
+    "dynamic narrator",
+    "7 major discoveries",
+    "5 hidden Fan Finds",
+    "road bag collection",
+    "postcard editor",
+    "drag/reposition",
+    "custom title",
+    "PNG export",
+    "native share",
+    "responsive layout"
+  ],
+  "files": [
+    "styles.css",
+    "index.html",
+    "game.js",
+    "README.md",
+    "assets/fries.svg",
+    "assets/dragster.svg",
+    "assets/car.svg",
+    "assets/shirt.svg",
+    "assets/speaker.svg",
+    "assets/map.svg",
+    "assets/arrow.svg",
+    "assets/shake.svg",
+    "assets/burger.svg",
+    "assets/route66.svg",
+    "assets/original.svg",
+    "assets/palms.svg",
+    "assets/approved-v2-concept.png"
+  ]
+}

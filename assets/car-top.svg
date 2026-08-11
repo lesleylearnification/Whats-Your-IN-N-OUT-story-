@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 180">
+<defs><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-opacity=".3"/></filter></defs>
+<g filter="url(#s)">
+<ellipse cx="60" cy="93" rx="43" ry="75" fill="#000" opacity=".16"/>
+<rect x="20" y="14" width="80" height="150" rx="32" fill="#d83a22" stroke="#6f1b18" stroke-width="5"/>
+<path d="M30 58Q60 39 90 58v60Q60 137 30 118z" fill="#f1a139" stroke="#6f1b18" stroke-width="4"/>
+<path d="M34 61Q60 47 86 61l-7 27H41z" fill="#8bc5d0" stroke="#5a4132" stroke-width="3"/>
+<path d="M41 95h38l7 21q-26 14-52 0z" fill="#8bc5d0" stroke="#5a4132" stroke-width="3"/>
+<path d="M34 25h52M34 151h52" stroke="#f7d347" stroke-width="5"/>
+<rect x="14" y="45" width="9" height="31" rx="4" fill="#252321"/><rect x="97" y="45" width="9" height="31" rx="4" fill="#252321"/>
+<rect x="14" y="111" width="9" height="31" rx="4" fill="#252321"/><rect x="97" y="111" width="9" height="31" rx="4" fill="#252321"/>
+<circle cx="40" cy="20" r="5" fill="#fff2bd"/><circle cx="80" cy="20" r="5" fill="#fff2bd"/>
+</g></svg>

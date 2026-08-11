@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+<path d="M17 23l55 9 51-13 60 10v98l-60-10-51 13-55-9z" fill="#f6e8bd" stroke="#765839" stroke-width="4"/>
+<path d="M72 32v98M123 19v98" stroke="#bda57b" stroke-width="2"/>
+<path d="M34 101c28-33 54-9 76-44s38 9 57-7" fill="none" stroke="#b51f28" stroke-width="5" stroke-dasharray="9 7"/>
+<circle cx="55" cy="84" r="6" fill="#f2c83e" stroke="#b51f28" stroke-width="3"/><circle cx="109" cy="57" r="6" fill="#f2c83e" stroke="#b51f28" stroke-width="3"/><circle cx="159" cy="49" r="6" fill="#f2c83e" stroke="#b51f28" stroke-width="3"/>
+<text x="99" y="142" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#694c32">GLOVE-BOX MAP</text>
+</svg>

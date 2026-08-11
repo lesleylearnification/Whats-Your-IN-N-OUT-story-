@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 100">
+<defs><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="3" flood-opacity=".28"/></filter></defs>
+<g filter="url(#s)">
+<ellipse cx="90" cy="84" rx="66" ry="9" fill="#000" opacity=".17"/>
+<path d="M26 58h19l10-25c4-9 13-15 23-15h35c11 0 20 6 25 16l10 24h11c7 0 12 5 12 12v5H16v-5c0-7 4-12 10-12z" fill="#f7f1dc" stroke="#7b1d22" stroke-width="4"/>
+<path d="M61 35c3-6 9-10 16-10h38c7 0 13 4 16 10l8 20H53z" fill="#fdf9ea" stroke="#7b1d22" stroke-width="3"/>
+<path d="M70 30h23v22H58l8-18c1-2 2-3 4-4z" fill="#8fc3cf"/>
+<path d="M98 30h18c4 0 8 3 10 7l7 15H98z" fill="#8fc3cf"/>
+<rect x="25" y="61" width="134" height="15" rx="7" fill="#b51f28"/>
+<circle cx="48" cy="78" r="13" fill="#292522"/><circle cx="48" cy="78" r="6" fill="#c9c5b8"/>
+<circle cx="137" cy="78" r="13" fill="#292522"/><circle cx="137" cy="78" r="6" fill="#c9c5b8"/>
+<path d="M78 61h43v14H78z" fill="#fff5d9"/><text x="99.5" y="72" text-anchor="middle" font-size="12" font-family="Arial" font-weight="800" fill="#b51f28">ROAD TRIP</text>
+<path d="M17 61h18M149 61h20" stroke="#f4c440" stroke-width="4"/>
+</g></svg>

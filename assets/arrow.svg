@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+<rect x="29" y="42" width="96" height="56" rx="6" fill="#f6f2dc" stroke="#a51e26" stroke-width="5"/>
+<path d="M113 51h46V33l28 37-28 37V89h-46z" fill="#f6c63d" stroke="#a51e26" stroke-width="5" stroke-linejoin="round"/>
+<text x="78" y="67" text-anchor="middle" font-family="Arial" font-size="15" font-weight="900" fill="#a51e26">IN-N-OUT</text>
+<text x="78" y="86" text-anchor="middle" font-family="Arial" font-size="12" font-weight="800" fill="#4d3b2f">1954</text>
+<rect x="73" y="99" width="10" height="45" fill="#6a4934"/>
+</svg>

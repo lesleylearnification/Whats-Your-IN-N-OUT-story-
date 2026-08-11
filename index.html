@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What's Your IN-N-OUT Story?</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#game">Skip to game</a>
+<header class="brandbar">
+  <div class="brand">
+    <span class="mini-arrow">➜</span>
+    <div>
+      <p class="kicker">WHAT'S YOUR</p>
+      <h1>IN-N-OUT <span>STORY?</span></h1>
+      <p class="tagline">Hit the road back to something good.</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button class="ghost" id="helpBtn">How to play</button>
+    <button class="ghost" id="resetBtn">Start over</button>
+  </div>
+</header>
+
+<main id="game" class="shell">
+  <section class="narrator-wrap" aria-live="polite">
+    <div class="narrator-lights"><i></i><i></i><i></i></div>
+    <div id="narrator" class="narrator">Road trip! Yeah! Where to first?</div>
+    <div class="trip-count"><strong id="momentCount">0</strong><span>moments</span></div>
+  </section>
+
+  <section class="game-layout">
+    <div class="map-card">
+      <div id="world" class="world polished-world" tabindex="0" aria-label="Road-trip map. Drive with WASD or arrow keys.">
+        <div class="skyline"></div>
+        <div class="coast"></div>
+        <div class="desert d1"></div><div class="desert d2"></div>
+        <svg class="roads" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+          <path class="road-shadow" d="M92 525 C180 465 194 358 286 338 C400 314 397 220 490 194 C587 167 638 251 719 225 C806 197 805 95 922 67"/>
+          <path class="road-main" d="M92 525 C180 465 194 358 286 338 C400 314 397 220 490 194 C587 167 638 251 719 225 C806 197 805 95 922 67"/>
+          <path class="road-center" d="M92 525 C180 465 194 358 286 338 C400 314 397 220 490 194 C587 167 638 251 719 225 C806 197 805 95 922 67"/>
+          <path class="side-road" d="M308 340 C351 407 431 442 493 505"/>
+          <path class="side-center" d="M308 340 C351 407 431 442 493 505"/>
+          <path class="side-road" d="M721 226 C780 316 866 334 931 387"/>
+          <path class="side-center" d="M721 226 C780 316 866 334 931 387"/>
+        </svg>
+
+        <div class="legend-pill">Drive anywhere. Bump into something interesting.</div>
+
+        <button class="landmark" data-id="beginning" style="--x:12%;--y:72%">
+          <img src="assets/original.svg" alt="">
+          <span>The Beginning</span>
+        </button>
+        <button class="landmark" data-id="arrow" style="--x:31%;--y:48%">
+          <img src="assets/arrow.svg" alt="">
+          <span>Follow the Arrow</span>
+        </button>
+        <button class="landmark" data-id="animal" style="--x:49%;--y:26%">
+          <img src="assets/burger.svg" alt="">
+          <span>Made to Order</span>
+        </button>
+        <button class="landmark" data-id="dragstrip" style="--x:51%;--y:78%">
+          <img src="assets/dragster.svg" alt="">
+          <span>California Speed</span>
+        </button>
+        <button class="landmark" data-id="palms" style="--x:72%;--y:35%">
+          <img src="assets/palms.svg" alt="">
+          <span>Buried Treasure</span>
+        </button>
+        <button class="landmark" data-id="fresh" style="--x:90%;--y:62%">
+          <img src="assets/fries.svg" alt="">
+          <span>Fresh Means Fresh</span>
+        </button>
+        <button class="landmark" data-id="ritual" style="--x:91%;--y:16%">
+          <img src="assets/map.svg" alt="">
+          <span>Your Road Ritual</span>
+        </button>
+
+        <button class="egg egg-a" data-egg="speaker" aria-label="Hidden fan find">📢</button>
+        <button class="egg egg-b" data-egg="shirt" aria-label="Hidden fan find">👕</button>
+        <button class="egg egg-c" data-egg="shake" aria-label="Hidden fan find">🥤</button>
+        <button class="egg egg-d" data-egg="route" aria-label="Hidden fan find">🛣️</button>
+        <button class="egg egg-e" data-egg="potato" aria-label="Hidden fan find">🥔</button>
+
+        <button class="roadstop rs1" data-stop="0" aria-label="Roadside In-N-Out stop"><img src="assets/roadstop.svg" alt=""></button>
+        <button class="roadstop rs2" data-stop="1" aria-label="Roadside In-N-Out stop"><img src="assets/roadstop.svg" alt=""></button>
+        <button class="roadstop rs3" data-stop="2" aria-label="Roadside In-N-Out stop"><img src="assets/roadstop.svg" alt=""></button>
+        <button class="roadstop rs4" data-stop="3" aria-label="Roadside In-N-Out stop"><img src="assets/roadstop.svg" alt=""></button>
+        <button class="roadstop rs5" data-stop="4" aria-label="Roadside In-N-Out stop"><img src="assets/roadstop.svg" alt=""></button>
+
+        <div id="car" class="car" aria-label="Your car">
+          <img src="assets/car-top.svg" alt="">
+          <span class="dust dust1"></span><span class="dust dust2"></span>
+        </div>
+
+        <div id="nearPrompt" class="near-prompt" hidden>Drive into a landmark to explore</div>
+
+        <div class="touch-controls" aria-label="Touch driving controls">
+          <button data-dir="up">▲</button>
+          <div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div>
+        </div>
+      </div>
+
+      <div class="map-footer">
+        <div><strong>WASD</strong> or <strong>Arrow Keys</strong> to drive · Touch a landmark to explore</div>
+        <div class="finds">FAN FINDS <strong id="findCount">0 / 5</strong></div>
+      </div>
+    </div>
+
+    <aside class="side-panel">
+      <section class="collection">
+        <div class="side-head">
+          <div>
+            <p class="kicker">YOUR ROAD BAG</p>
+            <h2>Things worth keeping</h2>
+          </div>
+          <button id="openPostcard" class="postcard-btn"><span id="postcardCount">0</span> moments<br><b>BUILD POSTCARD</b></button>
+        </div>
+        <p class="small">Every discovery becomes optional material for your final postcard. Keep only what feels like your story.</p>
+        <div id="collectionGrid" class="collection-grid">
+          <div class="empty-state">Your road bag is empty. Go find something.</div>
+        </div>
+      </section>
+
+      <section class="road-log">
+        <p class="kicker">ROAD LOG</p>
+        <div id="roadLog"><p>Car packed. Playlist on. No itinerary.</p></div>
+      </section>
+    </aside>
+  </section>
+</main>
+
+<dialog id="discoveryDialog" class="dialog discovery-dialog">
+  <button class="x" data-close="discoveryDialog" aria-label="Close">×</button>
+  <p class="kicker" id="discoverKicker">ROAD FIND</p>
+  <h2 id="discoverTitle"></h2>
+  <div class="discovery-visual"><img id="discoverImg" alt=""></div>
+  <p id="discoverFact" class="fact"></p>
+  <div id="discoverPromptWrap">
+    <label id="discoverPrompt" for="memoryInput"></label>
+    <textarea id="memoryInput" maxlength="100" placeholder="A sentence is plenty."></textarea>
+  </div>
+  <div class="dialog-actions">
+    <button class="secondary" id="skipMemory">Keep the find, skip the note</button>
+    <button class="primary" id="saveDiscovery">Add to my road bag</button>
+  </div>
+</dialog>
+
+<dialog id="eggDialog" class="dialog">
+  <button class="x" data-close="eggDialog" aria-label="Close">×</button>
+  <p class="kicker">FAN FIND!</p>
+  <h2 id="eggTitle"></h2>
+  <div class="discovery-visual egg-visual"><img id="eggImg" alt=""></div>
+  <p id="eggFact" class="fact"></p>
+  <p class="unlock" id="eggUnlock"></p>
+  <button class="primary full" id="claimEgg">Yep. That's going in the road bag.</button>
+</dialog>
+
+<dialog id="postcardDialog" class="dialog postcard-dialog">
+  <button class="x" data-close="postcardDialog" aria-label="Close">×</button>
+  <div class="postcard-editor-head">
+    <div>
+      <p class="kicker">YOUR IN-N-OUT STORY</p>
+      <h2>Make the postcard only you could make.</h2>
+    </div>
+    <button class="secondary" id="shuffleCard">Scatter it for me</button>
+  </div>
+
+  <div class="title-row">
+    <label for="postcardTitle">Give your story a title</label>
+    <input id="postcardTitle" maxlength="44" value="The Long Way Back">
+  </div>
+
+  <div class="editor-layout">
+    <div id="postcardCanvas" class="postcard-canvas polished-postcard">
+      <div class="pc-sun"></div><div class="pc-mountains"></div><div class="pc-road"></div>
+      <div class="pc-heading">Wish you were here!</div>
+      <div id="pcTitlePreview" class="pc-title">The Long Way Back</div>
+      <div id="pcItems" class="pc-items"></div>
+      <div class="pc-stamp">CALIFORNIA<br>MEMORY ROUTE</div>
+    </div>
+    <div class="editor-tray">
+      <p class="kicker">ROAD BAG</p>
+      <p class="small">Click an item to add it. Drag anything already on the postcard to reposition it.</p>
+      <div id="editorTray" class="editor-grid"></div>
+      <label for="finalNote">One last line for the road</label>
+      <textarea id="finalNote" maxlength="100" placeholder="What do you want this postcard to remember?"></textarea>
+      <button id="addFinalNote" class="secondary full">Add note</button>
+    </div>
+  </div>
+
+  <div class="share-row">
+    <button id="downloadPng" class="primary">Download postcard PNG</button>
+    <button id="shareCard" class="primary">Share</button>
+  </div>
+  <p class="prototype-note">Prototype sharing uses the browser's native share sheet when available. PNG export is generated locally.</p>
+</dialog>
+
+<dialog id="helpDialog" class="dialog">
+  <button class="x" data-close="helpDialog" aria-label="Close">×</button>
+  <p class="kicker">HOW TO PLAY</p>
+  <h2>Hit the road. Follow your curiosity.</h2>
+  <p>Drive with <strong>WASD</strong> or the <strong>arrow keys</strong>. On touchscreens, use the road controls. Drive into a landmark to explore it, or tap the landmark itself. Typing in a note field temporarily pauses driving controls.</p>
+  <p>Every discovery gives you something you can keep for your final postcard. Five smaller Fan Finds are hidden around the map. None are required.</p>
+  <p><strong>No points. No correct route.</strong> The goal is to collect the pieces that feel like your In-N-Out story.</p>
+  <button class="primary full" data-close="helpDialog">Hit the road</button>
+</dialog>
+
+<script src="game.js"></script>
+</body>
+</html>

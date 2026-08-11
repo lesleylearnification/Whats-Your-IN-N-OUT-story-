@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 160">
+<path d="M45 32L69 15h32l24 17 31 20-19 31-18-11v73H51V72L33 83 14 52z" fill="#f3efe2" stroke="#8e231f" stroke-width="4"/>
+<circle cx="85" cy="88" r="34" fill="#f5ce45" stroke="#b51f28" stroke-width="4"/>
+<path d="M59 91h41v-12l19 18-19 18v-11H59z" fill="#b51f28"/>
+<text x="85" y="55" text-anchor="middle" font-family="Arial" font-size="12" font-weight="900" fill="#b51f28">1975</text>
+</svg>

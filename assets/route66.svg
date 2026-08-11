@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
+<path d="M20 13h80v43c0 40-20 63-40 72-20-9-40-32-40-72z" fill="#f7f1df" stroke="#403a33" stroke-width="6"/>
+<text x="60" y="53" text-anchor="middle" font-family="Arial" font-size="20" font-weight="900" fill="#403a33">ROUTE</text>
+<text x="60" y="95" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" fill="#403a33">66</text>
+</svg>
